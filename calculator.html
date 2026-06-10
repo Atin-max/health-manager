@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Health Calculator</title>
+
+<!-- FIXED NAME -->
+<link rel="stylesheet" href="Calculator.css">
+</head>
+
+<body>
+
+<div class="main">
+
+    <div class="header">
+        <div class="line"></div>
+        <h1>Health Calculator</h1>
+        <div class="line"></div>
+    </div>
+
+    <div class="tabs">
+        <button class="tab active" onclick="showTab(event,'bmi')">BMI</button>
+        <button class="tab" onclick="showTab(event,'bmr')">BMR</button>
+        <button class="tab" onclick="showTab(event,'calories')">Calories</button>
+        <button class="tab" onclick="showTab(event,'water')">Water Intake</button>
+    </div>
+
+    <!-- BMI -->
+    <div id="bmi" class="content">
+        <div class="card">
+            <div class="inputs">
+                <input type="number" id="bmiHeight" placeholder="Height cm">
+                <div class="divider"></div>
+                <input type="number" id="bmiWeight" placeholder="Weight kg">
+            </div>
+            <button onclick="calculateBMI()">Calculate</button>
+        </div>
+
+        <div class="result-box">
+            <div class="result-header">Your BMI Result</div>
+            <h1 id="bmiValue">0</h1>
+            <p id="bmiText">--</p>
+        </div>
+    </div>
+
+    <!-- BMR -->
+    <div id="bmr" class="content hidden">
+        <div class="card">
+            <input type="number" id="bmrWeight" placeholder="Weight kg">
+            <input type="number" id="bmrHeight" placeholder="Height cm">
+            <input type="number" id="bmrAge" placeholder="Age">
+
+            <select id="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+
+            <button onclick="calculateBMR()">Calculate</button>
+        </div>
+
+        <div class="result-box">
+            <div class="result-header">Your BMR</div>
+            <h1 id="bmrResult">0</h1>
+        </div>
+    </div>
+
+    <!-- Calories -->
+    <div id="calories" class="content hidden">
+        <div class="card">
+            <input type="number" id="calWeight" placeholder="Weight kg">
+            <input type="number" id="calHeight" placeholder="Height cm">
+            <input type="number" id="calAge" placeholder="Age">
+
+            <select id="calGender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+
+            <select id="activity">
+                <option value="1.2">Sedentary</option>
+                <option value="1.375">Light</option>
+                <option value="1.55">Moderate</option>
+                <option value="1.725">Active</option>
+            </select>
+
+            <button onclick="calculateCalories()">Calculate</button>
+        </div>
+
+        <div class="result-box">
+            <div class="result-header">Daily Calories</div>
+            <h1 id="calResult">0</h1>
+        </div>
+    </div>
+
+    <!-- Water -->
+    <div id="water" class="content hidden">
+        <div class="card">
+            <input type="number" id="waterWeight" placeholder="Weight kg">
+            <button onclick="calculateWater()">Calculate</button>
+        </div>
+
+        <div class="result-box">
+            <div class="result-header">Daily Water Intake</div>
+            <h1 id="waterResult">0</h1>
+        </div>
+    </div>
+
+</div>
+
+<!-- FIXED NAME -->
+<script src="Calculator.js"></script>
+</body>
+</html>

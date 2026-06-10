@@ -1,0 +1,160 @@
+body {
+    background: #e6ebf1;
+    font-family: Arial, sans-serif;
+}
+
+/* MAIN */
+.main {
+    width: 600px;
+    margin: 40px auto;
+    background: #f4f5f7;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #5c86d6, #3f6fc1);
+    color: white;
+    padding: 15px;
+}
+
+.header h1 {
+    margin: 0 15px;
+}
+
+.line {
+    flex: 1;
+    height: 2px;
+    background: rgba(255,255,255,0.6);
+}
+
+/* TABS */
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px;
+    background: #eeeeee;
+}
+
+.tabs button {
+    padding: 8px 18px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background: #e0e0e0;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.tabs button:hover {
+    background: #d0d0d0;
+}
+
+.tabs .active {
+    background: linear-gradient(to right, #5c86d6, #3f6fc1);
+    color: white;
+    border: none;
+}
+
+/* CONTENT */
+.content {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+/* CARD */
+.card {
+    margin: 20px;
+    padding: 20px;
+    background: #f0f0f0;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.card input, .card select {
+    margin: 8px;
+    padding: 10px;
+    width: 40%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* INPUT GROUP */
+.inputs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.divider {
+    width: 1px;
+    height: 30px;
+    background: #ccc;
+}
+
+/* BUTTON */
+.card button {
+    margin-top: 10px;
+    padding: 10px 40px;
+    background: linear-gradient(to right, #5c86d6, #3f6fc1);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.card button:hover {
+    opacity: 0.9;
+}
+
+/* RESULT */
+.result-box {
+    margin: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    background: white;
+}
+
+.result-header {
+    background: linear-gradient(to right, #5c86d6, #3f6fc1);
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.result-box h1 {
+    font-size: 45px;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.result-box p {
+    text-align: center;
+    font-weight: bold;
+}
+
+/* SCALE */
+.scale {
+    display: flex;
+}
+
+.scale div {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+.under { background: #f4a261; }
+.normal { background: #6ab04c; }
+.over { background: #2d6a4f; }

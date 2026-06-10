@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Workout Planner</title>
+    <link rel="stylesheet" href="workout.css">
+</head>
+<body>
+
+<header>
+    <h1>🏋️ Weekly Workout Planner</h1>
+    <p>Choose your goal & level to generate your plan</p>
+</header>
+
+<!-- CONTROLS -->
+<section class="controls">
+
+    <div class="control-box">
+        <label>🎯 Select Goal</label>
+        <select id="goal">
+            <option value="fat">Fat Loss</option>
+            <option value="muscle">Muscle Gain</option>
+        </select>
+    </div>
+
+    <hr>
+
+    <div class="control-box">
+        <label>📊 Select Level</label>
+        <select id="level">
+            <option value="beginner">Beginner</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="advanced">Advanced</option>
+        </select>
+    </div>
+
+    <hr>
+
+    <button onclick="generatePlan()">Generate Workout</button>
+
+</section>
+
+<!-- WORKOUT PLAN -->
+<section id="planContainer" class="plan-container"></section>
+
+<footer>
+    <p>💪 Stay Consistent | 🔥 Stay Strong</p>
+</footer>
+
+<script src="workout.js"></script>
+</body>
+</html>

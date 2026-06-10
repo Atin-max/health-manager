@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+    text-align: center;
+}
+
+/* HEADER */
+header {
+    padding: 25px;
+}
+
+header h1 {
+    font-size: 32px;
+}
+
+header p {
+    opacity: 0.8;
+}
+
+/* CONTROLS */
+.controls {
+    margin: 20px auto;
+    width: 90%;
+    max-width: 500px;
+    padding: 25px;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+}
+
+/* Divider */
+.controls hr {
+    margin: 20px 0;
+    height: 2px;
+    border: none;
+    background: linear-gradient(to right, transparent, white, transparent);
+}
+
+/* CONTROL BOX */
+.control-box {
+    margin-bottom: 10px;
+}
+
+.control-box label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+/* SELECT */
+select {
+    width: 100%;
+    padding: 14px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+/* BUTTON */
+button {
+    width: 100%;
+    padding: 14px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: none;
+    background: #ff7b00;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ff5200;
+    transform: scale(1.05);
+}
+
+/* GRID */
+.plan-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* DAY CARD */
+.day-card {
+    padding: 15px;
+    border-radius: 15px;
+    color: white;
+    transition: 0.3s;
+}
+
+.day-card:hover {
+    transform: translateY(-5px);
+}
+
+/* COLORS */
+.monday { background: #ff416c; }
+.tuesday { background: #36d1dc; }
+.wednesday { background: #00b09b; }
+.thursday { background: #fc5c7d; }
+.friday { background: #f7971e; color: black; }
+.saturday { background: #8e2de2; }
+.sunday { background: #7f8c8d; }
+
+/* EXERCISE */
+.exercise {
+    background: rgba(255,255,255,0.2);
+    margin: 8px 0;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+/* REST */
+.rest {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* FOOTER */
+footer {
+    margin: 20px;
+    opacity: 0.7;
+}

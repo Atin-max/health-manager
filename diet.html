@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food & Diet Guide</title>
+    <link rel="stylesheet" href="diet.css">
+</head>
+<body>
+
+    <h1>🥗 Food & Diet Guide</h1>
+
+    <div class="section">
+        <h2>Select Your Diet Plan</h2>
+        <div class="cards">
+            <div class="card" onclick="showPlan('loss', event)">Weight Loss</div>
+            <div class="card" onclick="showPlan('gain', event)">Muscle Gain</div>
+            <div class="card" onclick="showPlan('balanced', event)">Balanced</div>
+        </div>
+        <div id="planOutput"></div>
+    </div>
+
+    <div class="section">
+        <h2>Food Comparison</h2>
+        <div class="btn-group">
+            <button onclick="showHealthy()">✅ Better Choices</button>
+            <button onclick="showJunk()">⚠️ Why Avoid Junk</button>
+        </div>
+        <div id="foodOutput"></div>
+    </div>
+
+    <div class="section">
+        <h2>🍴 Meal Suggestions</h2>
+        <button onclick="suggestMeal()" style="background: #27ae60;">Refresh Meals</button>
+        <div id="mealOutput"></div>
+        
+        <div id="savedContainer" class="saved-section" style="display:none;">
+            <h4>⭐ Saved Favorites</h4>
+            <ul id="favoritesList"></ul>
+        </div>
+    </div>
+
+   <div class="section water-section">
+    <h2>💧 Hydration Tracker</h2>
+    
+    <div class="bottle-container">
+    <div class="bottle-cap"></div>
+    <div class="bottle-neck"></div> <div class="bottle-body">
+        <div id="waterLevel" class="water-fill">
+            <span id="percentText"></span>
+        </div>
+        <div class="bottle-mark middle">Halfway!</div>
+    </div>
+    </div>
+
+    <p class="water-stats"><span id="waterCount">0</span> / 8 Glasses</p>
+    
+    <div class="btn-group">
+        <button onclick="addWater()" class="add-btn">+ Add Glass</button>
+        <button onclick="resetWater()" class="reset-btn">Reset</button>
+    </div>
+    <p id="waterMsg">Time for a sip! 🧊</p>
+</div>
+
+    <script src="diet.js"></script>
+</body>
+</html>

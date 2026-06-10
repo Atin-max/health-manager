@@ -1,0 +1,335 @@
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background: #eef2f3;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+h1 { color: green; margin-bottom: 30px; }
+
+.section {
+    margin: 30px auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 900px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.card {
+    padding: 15px 20px;
+    background: #e0ffe0;
+    border: 1px solid #c2f0c2;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    flex: 1;
+}
+
+.card:hover { transform: translateY(-5px); background: #bdfabd; }
+.card.active { background: #66ff66; font-weight: bold; border-color: green; }
+
+/* Plan Display Table */
+table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+th, td { padding: 12px; border-bottom: 1px solid #eee; text-align: left; }
+th { background: #f9f9f9; color: #2ecc71; }
+
+.planBox {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: left;
+    animation: fadeIn 0.5s ease;
+}
+
+.loss { background: linear-gradient(135deg, #d4fc79, #96e6a1); }
+.gain { background: linear-gradient(135deg, #a1c4fd, #c2e9fb); }
+.balanced { background: linear-gradient(135deg, #fddb92, #d1fdff); }
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    background: #2ecc71;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover { opacity: 0.9; }
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.grid div {
+    background: linear-gradient(135deg, #a8edea, #fed6e3);
+    padding: 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.progress {
+    width: 100%;
+    background: #ddd;
+    height: 20px;
+    border-radius: 10px;
+    margin: 15px 0;
+    overflow: hidden;
+}
+
+#progressBar {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    transition: 0.4s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.swap-container {
+    padding: 10px;
+}
+
+.impact-header {
+    background: #e8f5e9;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    color: #2e7d32;
+    border: 1px solid #c8e6c9;
+}
+
+.swap-card {
+    display: flex;
+    align-items: center;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    padding: 15px;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.side {
+    flex: 1;
+    padding: 5px 10px;
+}
+
+.bad { border-left: 5px solid #ff5252; background: #fff5f5; border-radius: 4px; }
+.good { border-left: 5px solid #4caf50; background: #f9fff9; border-radius: 4px; }
+
+.food-info { display: flex; align-items: center; gap: 10px; text-align: left; }
+.emoji { font-size: 24px; }
+
+.side small { font-size: 10px; color: #888; font-weight: bold; }
+.side p { margin: 2px 0 0; font-size: 12px; color: #666; }
+
+.swap-arrow { margin: 0 10px; font-size: 20px; color: #aaa; }
+
+.swap-btn {
+    position: absolute;
+    bottom: -10px;
+    right: 20px;
+    font-size: 11px;
+    padding: 5px 12px;
+    background: #2c3e50;
+    margin: 0;
+}
+.impact-container {
+    padding: 10px;
+    background: #fffafa;
+    border-radius: 12px;
+    border: 1px solid #ffcccc;
+}
+
+.impact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.impact-card {
+    background: white;
+    border: 1px solid #ffdfdf;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0 2px 5px rgba(255, 0, 0, 0.05);
+}
+
+.impact-header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #ff5252;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.impact-header strong { color: #c0392b; font-size: 14px; }
+.impact-header span { font-weight: bold; font-size: 14px; }
+
+.impact-card p {
+    font-size: 12px;
+    color: #555;
+    line-height: 1.4;
+}
+
+.hidden-list {
+    margin-top: 10px;
+    background: #fff5f5;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.hidden-list small { font-weight: bold; color: #888; display: block; margin-bottom: 5px; }
+
+.hidden-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.hidden-list li { font-size: 11px; color: #c0392b; }
+
+.recovery-timer {
+    margin-top: 20px;
+    background: #c0392b;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+@media (max-width: 600px) {
+    .impact-grid { grid-template-columns: 1fr; }
+}
+.plate-grid {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.plate-card {
+    background: rgba(255, 255, 255, 0.9); /* Changed from 0.6 to 0.9 for more solid color */
+    backdrop-filter: blur(5px);
+    padding: 20px;
+    border-radius: 15px;
+    flex: 1;
+    text-align: center;
+    border: 2px solid white; /* Thicker white border makes it look like a real card */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Stronger shadow so it "floats" */
+    transition: transform 0.3s ease;
+}
+
+.plate-card h4 {
+    color: #2d3436;
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+.plate-container {
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    padding: 30px;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.main-border { border-top: 8px solid #FFD93D; } 
+.side-border { border-top: 8px solid #6BCB77; } 
+.drink-border { border-top: 8px solid #4D96FF; }
+
+.badge-row span {
+    background: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: bold;
+    display: inline-block;
+    margin: 2px;
+}
+
+total-bar {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #444;
+}
+.water-section {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border: 2px solid #a8edea;
+}
+
+.bottle-container {
+    width: 100px;
+    margin: 20px auto;
+    position: relative;
+}
+
+.bottle-cap {
+    width: 40px;
+    height: 15px;
+    background: #74b9ff;
+    margin: 0 auto;
+    border-radius: 4px 4px 0 0;
+}
+
+.bottle-body {
+    width: 80px;
+    height: 180px;
+    border: 4px solid #74b9ff;
+    border-radius: 10px 10px 20px 20px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: #f1f2f6;
+}
+
+.water-fill {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 0%; /* Start empty */
+    background: linear-gradient(to top, #0984e3, #74b9ff);
+    transition: height 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#percentText {
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.bottle-mark {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    border-top: 1px dashed #74b9ff;
+    font-size: 10px;
+    color: #74b9ff;
+}
